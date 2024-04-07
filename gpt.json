@@ -1,0 +1,162 @@
+{
+    "searchParameters": {
+        "q": "apple inc",
+        "hl": "ru",
+        "type": "search",
+        "location": "United States",
+        "engine": "google",
+        "gl": "us"
+    },
+    "knowledgeGraph": {
+        "title": "Apple",
+        "type": "Корпорация",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtrEchABg6_3fHSZNBGgavPyZ21wGjioE1JHOAf91VRPDEEvjPiJMQhA&s=0",
+        "description": "Apple — американская корпорация, разработчик персональных и планшетных компьютеров, аудиоплееров, смартфонов, программного обеспечения и цифрового контента. Штаб-квартира расположена в Купертино, штат Калифорния.",
+        "descriptionSource": "Википедия",
+        "descriptionLink": "https://ru.wikipedia.org/wiki/Apple",
+        "attributes": {
+            "Основатели": "Стив Джобс, Стив Возняк и Рональд Уэйн",
+            "Штаб-квартира": "Купертино, Калифорния",
+            "Генеральный директор": "Тим Кук (24 авг. 2011 г.–)",
+            "Контактный центр": "1 (800) 275-2273",
+            "Дата основания": "1 апреля 1976 г., Лос-Альтос, Калифорния"
+        }
+    },
+    "organic": [
+        {
+            "title": "Apple",
+            "link": "https://www.apple.com/",
+            "snippet": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, ...",
+            "sitelinks": [
+                {
+                    "title": "Support",
+                    "link": "https://support.apple.com/"
+                },
+                {
+                    "title": "Store",
+                    "link": "https://www.apple.com/store"
+                },
+                {
+                    "title": "Business",
+                    "link": "https://www.apple.com/business/"
+                },
+                {
+                    "title": "Mac",
+                    "link": "https://www.apple.com/mac/"
+                },
+                {
+                    "title": "Site Map",
+                    "link": "https://www.apple.com/sitemap/"
+                }
+            ],
+            "position": 1
+        },
+        {
+            "title": "Apple Inc. - Wikipedia",
+            "link": "https://en.wikipedia.org/wiki/Apple_Inc.",
+            "snippet": "Apple Inc. (formerly Apple Computer, Inc.) is an American multinational corporation and technology company headquartered in Cupertino, California, ...",
+            "sitelinks": [
+                {
+                    "title": "History",
+                    "link": "https://en.wikipedia.org/wiki/History_of_Apple_Inc."
+                },
+                {
+                    "title": "Litigation involving Apple Inc.",
+                    "link": "https://en.wikipedia.org/wiki/Litigation_involving_Apple_Inc."
+                },
+                {
+                    "title": "Apple Park",
+                    "link": "https://en.wikipedia.org/wiki/Apple_Park"
+                },
+                {
+                    "title": "Apple TV",
+                    "link": "https://en.wikipedia.org/wiki/Apple_TV"
+                }
+            ],
+            "position": 2
+        },
+        {
+            "title": "Apple Inc. | History, Products, Headquarters, & Facts | Britannica",
+            "link": "https://www.britannica.com/topic/Apple-Inc",
+            "snippet": "American manufacturer of personal computers, smartphones, and tablet computers. It was the first successful personal computer company and ...",
+            "date": "6 дней назад",
+            "position": 3
+        },
+        {
+            "title": "Apple Inc. | History, Products, Headquarters, & Facts - Britannica",
+            "link": "https://www.britannica.com/money/Apple-Inc",
+            "snippet": "It was the first successful personal computer company and the popularizer of the graphical user interface. Headquarters are located in Cupertino, California.",
+            "position": 4
+        },
+        {
+            "title": "Apple Inc - Company Profile and News - Bloomberg Markets",
+            "link": "https://www.bloomberg.com/profile/company/AAPL:US",
+            "snippet": "Apple Inc. Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related ...",
+            "position": 5
+        },
+        {
+            "title": "Apple | AAPL Stock Price, Company Overview & News - Forbes",
+            "link": "https://www.forbes.com/companies/apple/",
+            "snippet": "Apple, Inc. engages in the design, manufacture, and sale of smartphones, personal computers, tablets, wearables and accessories, and other variety of ...",
+            "position": 6
+        },
+        {
+            "title": "Apple Inc Company Profile - Apple Inc Overview - GlobalData",
+            "link": "https://www.globaldata.com/company-profile/apple-inc/",
+            "snippet": "Apple Inc (Apple) designs, manufactures, and markets smartphones, tablets, personal computers, and wearable devices. The company offers software ...",
+            "position": 7
+        }
+    ],
+    "peopleAlsoAsk": [
+        {
+            "question": "What does the Apple Inc do?",
+            "snippet": "Apple Inc. designs, manufactures and markets smartphones, personal computers, tablets, wearables and accessories, and sells a variety of related services. Its product categories include iPhone, Mac, iPad, and Wearables, Home and Accessories. Its software platforms include iOS, iPadOS, macOS, watchOS, and tvOS.",
+            "title": "AAPL.O - | Stock Price & Latest News - Reuters",
+            "link": "https://www.reuters.com/markets/companies/AAPL.O/"
+        },
+        {
+            "question": "Why did Apple change to Apple Inc?",
+            "snippet": "During his keynote speech at the Macworld Expo on January 9, 2007, Jobs announced the renaming of Apple Computer, Inc. to Apple Inc., because the company had shifted its emphasis from computers to consumer electronics. This event also saw the announcement of the iPhone and the Apple TV.",
+            "title": "Apple Inc. - Wikipedia",
+            "link": "https://en.wikipedia.org/wiki/Apple_Inc."
+        },
+        {
+            "question": "Who owns Apple Inc?",
+            "snippet": "Apple (AAPL) Ownership Overview The ownership structure of Apple (AAPL) stock is a mix of institutional, retail and individual investors. Approximately 32.93% of the company's stock is owned by Institutional Investors, 0.11% is owned by Insiders and 66.96% is owned by Public Companies and Individual Investors.",
+            "title": "Who owns Apple? AAPL Stock Ownership - TipRanks.com",
+            "link": "https://www.tipranks.com/stocks/aapl/ownership"
+        },
+        {
+            "question": "Why is Apple Inc called Apple?",
+            "snippet": "But in reality, Steve Jobs named the company Apple because he liked the fruit. Steve Jobs followed a fruitarian diet and suggested the name Apple to Wozniak after Jobs visited an apple orchard.",
+            "title": "The Apple Logo: History, Meaning, Design Influences, and Evolution",
+            "link": "https://www.crowdspring.com/blog/apple-logo/"
+        }
+    ],
+    "relatedSearches": [
+        {
+            "query": "Apple Inc что это"
+        },
+        {
+            "query": "Apple официальный сайт"
+        },
+        {
+            "query": "About Apple company in english"
+        },
+        {
+            "query": "History of Apple company in short"
+        },
+        {
+            "query": "Apple USA"
+        },
+        {
+            "query": "Apple Store"
+        },
+        {
+            "query": "Apple company History"
+        },
+        {
+            "query": "Apple Store USA"
+        }
+    ]
+}

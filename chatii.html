@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Чат-бот</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+            #chatLog {
+                width: 80%;
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 10px;
+                background-color: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                overflow-y: scroll;
+                max-height: 400px;
+            }
+            .message {
+                margin: 5px 0;
+                padding: 5px 10px;
+                border-radius: 5px;
+            }
+            .user {
+                background-color: #cce6ff;
+                align-self: flex-start;
+            }
+            .bot {
+                background-color: #ffcccc;
+                align-self: flex-end;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="chatLog"></div>
+        <div>
+            <!-- Вставьте сгенерированный код Google Custom Search Engine сюда -->
+            <script async src="https://cse.google.com/cse.js?cx=c7a3f91ca1da7445b"></script>
+            <div class="gcse-search"></div>
+    
+            <input type="text" id="userInput" placeholder="Введите ваш вопрос...">
+            <button id="sendButton">Отправить</button>
+        </div>
+    
+        <script>
+            const chatLog = document.getElementById('chatLog');
+            const userInput = document.getElementById('userInput');
+            const sendButton = document.getElementById('sendButton');
+    
+            sendButton.addEventListener('click', sendMessage);
+            userInput.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+    
+            async function sendMessage() {
+                const message = userInput.value.trim();
+                if (message !== '') {
+                    displayMessage(message, 'user');
+                    const searchResult = await searchOnGoogle(message);
+                    displayMessage(searchResult, 'bot');
+                    userInput.value = '';
+                }
+            }
+    
+            function displayMessage(message, sender) {
+                const messageWrapper = document.createElement('div');
+                messageWrapper.className = 'message';
+                messageWrapper.textContent = message;
+                messageWrapper.classList.add(sender);
+                chatLog.appendChild(messageWrapper);
+                chatLog.scrollTop = chatLog.scrollHeight; // Прокрутка чата вниз
+            }
+    
+            async function searchOnGoogle(query) {
+                const apiKey = 'f4f03191a3af2626ced0fdbd6c3c358f09af8d70';
+                const searchEngineId = 'c7a3f91ca1da7445b';
+                const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(query)}&cx=${searchEngineId}&key=${apiKey}`;
+                
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                        throw new Error(`Ошибка HTTP: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    if (data.items && data.items.length > 0) {
+                        const firstResult = data.items[0];
+                        const title = firstResult.title;
+                        const snippet = firstResult.snippet;
+                        return `${title}: ${snippet}`;
+                    } else {
+                        return "Извините, не удалось найти информацию по вашему запросу.";
+                    }
+                } catch (error) {
+                    console.error('Произошла ошибка при выполнении запроса к поиску Google:', error);
+                    return "Ошибка при выполнении запроса к поиску Google.";
+                }
+            }
+        </script>
+    </body>
+    

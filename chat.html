@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой чат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #chatLog {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: scroll;
+            max-height: 400px;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .user {
+            background-color: #cce6ff;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatLog"></div>
+    <div>
+        <input type="text" id="userInput" placeholder="Введите ваше сообщение...">
+        <button id="sendButton">Отправить</button>
+    </div>
+
+    <script>
+        const chatLog = document.getElementById('chatLog');
+        const userInput = document.getElementById('userInput');
+        const sendButton = document.getElementById('sendButton');
+
+        // Генерация случайного номера пользователя
+        const userId = Math.floor(Math.random() * 1000) + 1;
+
+        sendButton.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // EventSource для получения сообщений от сервера
+        const eventSource = new EventSource('/stream');
+
+        // Слушатель события "message"
+        eventSource.addEventListener('message', function(event) {
+            displayMessage(event.data, 'bot');
+        });
+
+        function sendMessage() {
+            const message = userInput.value.trim();
+            if (message !== '') {
+                // Отображение сообщения с номером пользователя
+                const formattedMessage = `Пользователь ${userId}: ${message}`;
+                displayMessage(formattedMessage, 'user');
+                userInput.value = '';
+
+                // Отправка сообщения на сервер
+                fetch('/send-message', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message })
+                });
+            }
+        }
+
+        function displayMessage(message, sender) {
+            const messageWrapper = document.createElement('div');
+            messageWrapper.className = 'message';
+            messageWrapper.textContent = message;
+            messageWrapper.classList.add(sender);
+            chatLog.appendChild(messageWrapper);
+            chatLog.scrollTop = chatLog.scrollHeight; // Прокрутка чата вниз
+        }
+    </script>
+</body>
+</html>
